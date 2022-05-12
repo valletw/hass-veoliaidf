@@ -1,0 +1,15 @@
+{
+    "domain": "veoliaidf",
+    "name": "Veolia IDF",
+    "documentation": "https://github.com/valletw/hass-veoliaidf",
+    "iot_class": "cloud_polling",
+    "config_flow": true,
+    "codeowners": [
+        "@valletw"
+    ],
+    "dependencies": [],
+    "requirements": [
+        "pyveoliaidf==0.1.13"
+    ],
+    "version": "0.0.1"
+}

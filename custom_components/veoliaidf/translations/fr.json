@@ -1,0 +1,38 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Ajout d'un compte Veolia IDF",
+                "description": "Entrez vos identifiants",
+                "data": {
+                    "username": "E-Mail",
+                    "password": "Mot de passe",
+                    "webdriver": "Chemin du driver web",
+                    "install": "Commande d'installation"
+                }
+            }
+        },
+        "error": {
+            "invalid_path": "Le driver web n'existe pas",
+            "auth": "Impossible de se connecter"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Ajout d'un compte Veolia IDF",
+                "description": "Entrez vos identifiants",
+                "data": {
+                    "username": "E-Mail",
+                    "password": "Mot de passe",
+                    "webdriver": "Chemin du driver web",
+                    "install": "Commande d'installation"
+                }
+            }
+        },
+        "error": {
+            "invalid_path": "Le driver web n'existe pas",
+            "auth": "Impossible de se connecter"
+        }
+    }
+}

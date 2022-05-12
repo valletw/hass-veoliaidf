@@ -1,0 +1,38 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Add Veolia IDF account",
+                "description": "Enter your credential",
+                "data": {
+                    "username": "E-Mail",
+                    "password": "Password",
+                    "webdriver": "Webdriver path",
+                    "install": "Installation command"
+                }
+            }
+        },
+        "error": {
+            "invalid_path": "The webdriver does not exist",
+            "auth": "Connection failed"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "Add Veolia IDF account",
+                "description": "Enter your credential",
+                "data": {
+                    "username": "E-Mail",
+                    "password": "Password",
+                    "webdriver": "Webdriver path",
+                    "install": "Installation command"
+                }
+            }
+        },
+        "error": {
+            "invalid_path": "The webdriver does not exist",
+            "auth": "Connection failed"
+        }
+    }
+}
