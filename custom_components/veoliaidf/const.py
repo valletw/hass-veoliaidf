@@ -24,7 +24,7 @@ CONF_INSTALL = "install"
 # Defaults.
 DEFAULT_INSTALL = "apk add"
 SCAN_INTERVAL = timedelta(hours=4)
-CONNECTION_TIMEOUT = timedelta(minutes=10)
+CONNECTION_TIMEOUT = timedelta(minutes=30)
 LAST_N_DAYS = 7
 
 # API data field.
