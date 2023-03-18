@@ -19,8 +19,7 @@ from .const import (
     CONF_PASS,
     CONF_WEBDRIVER,
     CONF_INSTALL,
-    API_DATA_TIME,
-    API_DATA_DAILY
+    API_DATA_TIME
 )
 
 
@@ -96,12 +95,4 @@ class VeoliaIdfCoordinator(DataUpdateCoordinator):
             raise UpdateFailed from exc
         data_sort = sorted(data, key=lambda d: d[API_DATA_TIME])
         # Get most recent value.
-        latest = data_sort[-1]
-        # Check if data is in range before updating.
-        # Some API call returns the last month value instead of daily report.
-        if self.data is not None \
-                and API_DATA_DAILY in self.data \
-                and latest[API_DATA_DAILY] > self.data[API_DATA_DAILY] * 10:
-            _LOGGER.error("Daily liter seems to high for a day")
-            raise UpdateFailed
-        return latest
+        return data_sort[-1]
