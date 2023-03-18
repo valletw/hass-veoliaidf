@@ -10,7 +10,8 @@ from .const import (
     API_DATA_TIME,
     API_DATA_TOTAL,
     API_DATA_DAILY,
-    CONNECTION_TIMEOUT
+    CONNECTION_TIMEOUT,
+    LAST_N_DAYS
 )
 
 
@@ -39,8 +40,11 @@ class VeoliaIdfApiClient:
         try:
             # Connect to website.
             client = pyveoliaidf.Client(
-                self._login, self._password, self._driver,
-                int(CONNECTION_TIMEOUT.total_seconds()), "/tmp"
+                self._login, self._password,
+                lastNDays=LAST_N_DAYS,
+                firefox_webdriver_executable=self._driver,
+                wait_time=int(CONNECTION_TIMEOUT.total_seconds()),
+                tmp_directory="/tmp"
             )
             await asyncio.gather(
                 asyncio.to_thread(client.update)
